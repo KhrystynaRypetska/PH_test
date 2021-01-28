@@ -1,0 +1,164 @@
+.header {
+    &_navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_logo {
+            &-title {
+                font-family: var(--Georgia);
+                font-size: 32.5px;
+                letter-spacing: 1.95px;
+                color: var(--mainCollor);
+                padding-bottom: 8px;
+            }
+
+            &-subtitle {
+                font-family: var(--ArialNormal);
+                font-size: 13px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                letter-spacing: 1.3px;
+                color: var(--waightText);
+            }
+        }
+    }
+
+    &_nav {
+        @include media-to(m-plus) {
+            display: flex;
+            height: 100%;
+        }
+        &_list {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            @include media-to(m-plus) {
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+            }
+
+            &_item {
+                margin-left: 40px;
+                @include media-to(m-plus) {
+                    margin: 30px 0;
+                }
+
+                a {
+                    position: relative;
+                    font-family: var(--ArialNormal);
+                    font-size: 15px;
+                    line-height: 1.93;
+                    color: var(--laightDarck);
+                    text-decoration: none;
+                    padding: 5px 0;
+
+                    &:hover {
+                        &:after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            bottom: 0;
+                            left: 0;
+                            background-color: var(--mainCollor);
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media-to(m-plus) {
+
+        }
+
+        &_wrapper {
+            @include media-to(m-plus) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: -120%;
+                top: -70px;
+                right: 0;
+                width: 100%;
+                height: 670px;
+                background-color: var(--sectionDarck);
+                opacity: 0.9;
+                transition: all .3s ease-in-out;
+                &.show-menu {
+                    left: 0;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+    }
+
+    .mobil-btn-header {
+        @include media-from(m-plus) {
+            display: none;
+        }
+        @include media-to(m-plus) {
+            display: flex;
+        }
+    }
+    .buttonMob {
+        position: relative;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 50px;
+        transition: all .6s ease-in-out;
+        cursor: pointer;
+        @include media-to(l-less) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &.open {
+            .buttonMob_burger {
+                transform: translateX(-60px);
+                background: transparent;
+                transition: all .4s ease-in-out;
+                &:before {
+                    transform: rotate(45deg) translate(49px, -35px);
+                }
+                &:after{
+                    transform: rotate(-45deg) translate(49px, 35px);
+                }
+            }
+
+        }
+
+        &_burger {
+            position: absolute;
+            height: 3px;
+            width: 30px;
+            background-color: var(--mainCollor);
+            transition: all .6s ease-in-out;
+            &:after,
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+
+                width: 30px;
+                height: 3px;
+                left: 0;
+                transition: all .6s ease-in-out;
+                background-color: var(--mainCollor) ;
+            }
+            &:before {
+                bottom: 10px;
+            }
+            &:after{
+                top: 10px;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,26 @@
+//@import '~normalize.css';
+@import "~normalize.css/normalize.css";
+@import '~reset-css';
+@import 'fonts.css';
+
+//style.scss
+@import 'src/assets/styles/theme';
+
+@import 'global/mixins/mixins';
+@import 'global/media/media';
+@import 'global/typo/typo';
+@import 'global/typo/button';
+
+@import 'global/base/base';
+@import "global/base/section";
+@import 'global/variable/variables';
+
+@import "header/header";
+@import "footer/footer";
+
+@import "banner/banner";
+@import "about-us/about-us";
+@import "our-friends/our-friends";
+@import "helps/helps";
+@import "donation/donation";
+

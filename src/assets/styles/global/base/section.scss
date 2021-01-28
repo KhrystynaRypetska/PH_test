@@ -1,0 +1,32 @@
+.section {
+    &--banner {
+        padding: 230px 0;
+        background-color: var(--sectionDarck);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    &--about-us {
+        padding: 90px 0;
+        background-color: var(--sectionWaight);
+    }
+    &--donation {
+        padding-bottom: 85px;
+        padding-top: 70px;
+        background-color: var(--sectionGray);
+    }
+    &--helps {
+        padding-top: 70px ;
+        background-color: var(--sectionWaight);
+    }
+    &--our-friends {
+        padding-top: 80px;
+        padding-bottom: 70px;
+        background-color: var(--sectionGray);
+    }
+
+}

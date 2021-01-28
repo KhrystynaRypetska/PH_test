@@ -1,0 +1,61 @@
+.button {
+    &_main {
+        padding: 18px 44px;
+        background-color: var(--mainCollor);
+        border: 1px solid var(--mainCollor);
+        border-radius: 26px;
+        transition: all .3s ease-in-out;
+
+        font-family: var(--Georgia);
+        font-size: 17px;
+        color: var(--darckText);
+        letter-spacing: 1.02px;
+        &:hover,
+        &:active {
+            background-color: transparent;
+            transition: all .3s ease-in-out;
+            color: var(--mainCollor);
+        }
+    }
+    &_donation {
+        border-radius: 9px;
+        background-color: var(--mainCollor);
+        border: 1px solid var(--mainCollor);
+        margin-top: 15px;
+        margin-bottom: 35px;
+        text-align: center;
+        transition: all .3s ease-in-out;
+        > a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            width: 100%;
+            height: 100%;
+            font-family: var(--TimesNewRoman);
+            font-size: 20px;
+            line-height: 2.25;
+            letter-spacing: 1.2px;
+            color: var(--darckText);
+            padding: 0 15px;
+            text-decoration: none;
+            @include media-to(m-less) {
+                font-size: 15px;
+            }
+            > svg {
+                display: flex;
+                max-width: 30px;
+                max-height: 22px;
+                width: 100%;
+                height: 100%;
+                margin-right: 15px;
+            }
+        }
+
+        &:hover,
+        &:active {
+            background-color: transparent;
+            transition: all .3s ease-in-out;
+        }
+    }
+}

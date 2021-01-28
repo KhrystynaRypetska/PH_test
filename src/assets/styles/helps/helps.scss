@@ -1,0 +1,43 @@
+.helps {
+    &_title {
+        font-family: var(--Georgia);
+        font-size: 35px;
+        line-height: 1.29;
+        letter-spacing: 2.1px;
+        text-align: center;
+        color: var(--textCollor);
+        @include media-to(m-less) {
+            font-size: 25px;
+        }
+    }
+    &_options {
+        &_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        &_item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin:  40px 54px;
+        }
+        &_img {
+            display: block;
+            width: auto;
+            height: auto;
+            margin-bottom: 30px;
+        }
+        &_title {
+            font-family: var(--Georgia);
+            font-size: 20px;
+            line-height: 1.2;
+            letter-spacing: 1.2px;
+            text-align: center;
+            color: var(--textCollor);
+        }
+    }
+}

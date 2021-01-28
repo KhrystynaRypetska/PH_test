@@ -1,0 +1,10 @@
+
+.idea
+.vscode
+.github
+.env
+ehthumbs.db
+Thumbs.db
+node_modules
+yarn.lock
+package-lock.json
